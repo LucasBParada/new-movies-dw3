@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --background: #5a3e1b;
+  --foreground: #ffffff;
+  --green-mc: #3f9b2b;
+  --green-dark-mc: #2a5b1e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Minecraft", var(--font-geist-sans), sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #2e1f0f;
+    --foreground: #d0d0d0;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Minecraft", Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+.section-mc {
+  background-color: #2d2d2d;
+  border: 4px solid var(--green-mc);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 12px #000;
+}
+
+.btn-mc {
+  background-color: var(--green-mc);
+  border: 3px solid var(--green-dark-mc);
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 12px;
+  transition: 0.2s;
+  box-shadow: 3px 3px #1a3613;
+}
+
+.btn-mc:hover {
+  background-color: #2e8d23;
+  transform: scale(1.03);
+}
+
+.input-mc {
+  background-color: #4c4c4c;
+  color: white;
+  border: 2px solid var(--green-mc);
+  padding: 10px;
+  border-radius: 10px;
+}
